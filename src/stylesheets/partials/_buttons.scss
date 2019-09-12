@@ -1,0 +1,43 @@
+.dd-btn{
+    border-radius:3px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    border:none;
+    box-sizing:border-box;
+    font-size: 11px;
+    font-weight: 600;
+    padding:.8em 3.5em;
+    border:2px solid transparent;
+    transition:background 200ms ease-in-out,color 200ms ease-in-out, box-shadow 200ms ease-in-out, border 200ms ease-in-out, transform 200ms ease-in-out;
+    &--fill#{&}--white{
+      background:$white;
+    }
+    &--fill#{&}--primary{
+      background:$primary;
+      color:$white;      
+      box-shadow:0px 5px 15px transparentize($primary, .7);
+    }
+    &--w--thin{
+      padding-right:2em;
+      padding-left:2em;
+    }
+    &--outline#{&}--white{
+      color:$white;
+      background:none;
+      border-color:$white;
+      &:hover,&:active,&:focus{
+        background:$white;
+        color:$black;
+        box-shadow: 0px 5px 15px rgba(255, 255,255, 0.3);
+      }
+    }
+    &.fas.fa-arrow-right{
+      &:before{
+        content:'f061';
+      }
+    }
+}
+
+button {  
+    cursor:pointer;
+}

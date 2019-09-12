@@ -1,0 +1,41 @@
+.dd-navbar{
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease-in-out 0s;
+    font-weight:500;  
+}
+.dd-nav-link{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:11px;
+    display:inline-flex;
+    padding:.8em .8em !important;
+    align-items:center;
+    justify-content:center;
+    border:1.5px solid transparent;
+    color:$white !important;
+    font-weight:600;
+    margin:0px 8px;
+    transition: color 200ms ease-in-out, border-color 200ms ease-in-out, background-color 200ms ease-in-out;
+    &:hover,&:active,&:focus{
+        color:hsla(0,0%,100%,.5) !important;
+    }
+    &--cta{
+        padding:.8em 3em !important;
+        border-color:$primary !important;
+        background-color:$primary;
+        font-weight:bold;
+        border-radius:2px;
+        @include media-breakpoint-up(md) {
+            margin-left:35px;
+        }
+        &:hover,&:active,&:focus{
+            color:$white !important;
+        }
+        box-shadow:0px 5px 15px transparentize($primary, .6);
+    }
+}
+.navbar-dark .navbar-toggler{
+    border:none;
+}
