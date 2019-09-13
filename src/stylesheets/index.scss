@@ -94,11 +94,6 @@ body{
       font-size:5em;    
     }    
   }
-  .container{
-    @include media-breakpoint-up(xxl) {
-      max-width:85%;
-    }    
-  }
 }
 .dd-bg-footer{
   background-image:url('assets/img/footer.svg');
