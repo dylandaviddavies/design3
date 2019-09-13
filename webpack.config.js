@@ -24,13 +24,6 @@ module.exports = {
                         }
                     },
                     {
-                        loader: 'sass-loader',
-                        options: {
-                            includePaths: ['./node_modules'],
-                            url:false
-                        },
-                    },
-                    {
                         loader: 'postcss-loader',
                         options: {
                             includePaths: ['./node_modules'],
@@ -40,6 +33,13 @@ module.exports = {
                                 require('autoprefixer')
                               ];
                             }
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: ['./node_modules'],
+                            url:false
                         },
                     },
                 ],

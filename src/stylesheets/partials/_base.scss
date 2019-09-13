@@ -2,3 +2,14 @@
 @import '~reset-css';
 @import './typography.scss';
 @import './colors.scss';
+@import './mixins.scss';
+$container-max-widths-custom:(
+    xxl: 1380px,
+    xxxl: 1560px
+);
+$container-max-widths: map-merge($container-max-widths, $container-max-widths-custom);
+$grid-breakpoints-custom:(
+    xxl: 1380px,
+    xxxl: 1560px
+);
+$grid-breakpoints: map-merge($grid-breakpoints, $grid-breakpoints-custom);

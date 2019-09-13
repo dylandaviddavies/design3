@@ -35,6 +35,9 @@ body{
   display:flex;
   flex-direction:column;
   box-sizing:border-box;
+  @include media-breakpoint-between(md,md) {
+    width:220px;
+  }    
   &__img{
     width:auto;
     height:150px;
@@ -42,18 +45,32 @@ body{
     margin-bottom:16px;
   }
   &__h3{
-    margin-bottom:8px;
-    font-size:16px;
+    margin-bottom:4px;
     font-weight:bold;
+    font-size:15px;
     color:rgba(0,0,0,.8);
+    margin-bottom:8px;
+    @include media-breakpoint-between(md,md) {
+      margin-bottom:4px;
+      font-size:12px;
+    }    
+  }
+  &__btn{
+    @include media-breakpoint-between(md,md) {
+      font-size:10px;
+    }    
   }
   &__p{
     margin-bottom:16px;
+    @include media-breakpoint-between(md,md) {
+      margin-bottom:8px;
+      font-size:12px;
+    }    
   }
   &-container{
     display:flex;
     flex-direction:column;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       flex-direction:row;
     }    
   }
@@ -69,7 +86,18 @@ body{
   }
   &__h1{
     font-weight:bold;
-    font-size:4.2em;
+    font-size:3em;   
+    @include media-breakpoint-up(lg) {
+      font-size:4.2em;    
+    }    
+    @include media-breakpoint-up(xl) {
+      font-size:5em;    
+    }    
+  }
+  .container{
+    @include media-breakpoint-up(xxl) {
+      max-width:85%;
+    }    
   }
 }
 .dd-bg-footer{
@@ -100,4 +128,15 @@ body{
 }
 .dd-color-white{
   color:$white;
+}
+@each $name, $value in $grid-breakpoints {
+  .dd-bp-max-#{$name}{   
+    @each $k, $v in $grid-breakpoints{
+      @if (index(($grid-breakpoints), ($k $v)) > index(($grid-breakpoints), ($name $value))) {
+        @media (min-width: $v) {
+          max-width:$value;
+        }
+      }
+    }
+  }
 }
