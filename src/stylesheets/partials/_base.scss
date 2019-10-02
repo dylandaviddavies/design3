@@ -1,8 +1,8 @@
+@import './variables.scss';
+@import './mixins.scss';
 @import "~bootstrap/scss/bootstrap";
 @import '~reset-css';
 @import './typography.scss';
-@import './colors.scss';
-@import './mixins.scss';
 $container-max-widths-custom:(
     xxl: 1380px,
     xxxl: 1560px

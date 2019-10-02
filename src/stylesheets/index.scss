@@ -1,7 +1,8 @@
 @import './partials/base.scss',
-    './partials/inputContainer.scss',
+    '~aos/dist/aos.css',
     './partials/utility.scss',
     './partials/buttons.scss',
+    './partials/forms.scss',
     './partials/navs.scss';
 
 body,html{
@@ -77,7 +78,7 @@ body{
 }
 
 .dd-hero{
-  padding:60px 0 80px 0;
+  padding:30px 0 40px 0;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -120,9 +121,6 @@ body{
 }
 .dd-bg-primary{
   background-color:$primary;
-}
-.dd-color-white{
-  color:$white;
 }
 @each $name, $value in $grid-breakpoints {
   .dd-bp-max-#{$name}{   

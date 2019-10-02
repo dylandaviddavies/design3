@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,900&display=swap');
-$base-font-family: 'Open Sans', serif;
-
 body{
   font-size:14px;
   font-weight:500;
 }
-body,button,input{
-  font-family:$base-font-family, serif;
+body,button,input,select,form,tr,td,table{
+  font-family:$font-sans-serif;
 }
 
 .material-icons {
@@ -27,4 +24,12 @@ h3{
 }
 h4{
   font-size:2em;
+}
+@each $k, $v in $letter-spacings {
+    .letter-spacing-#{$k}{
+      letter-spacing: $v;
+    }
+}
+.font-weight-black{
+    font-weight:900 !important;
 }
