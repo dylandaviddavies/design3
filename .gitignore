@@ -1,2 +1,4 @@
 node_modules/
 .sass-cache/
+/public/dist/bundle.min.css
+/public/dist/bundle.min.js
