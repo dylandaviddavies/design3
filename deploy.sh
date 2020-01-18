@@ -9,5 +9,3 @@ git add -A
 git commit -m 'deploy'
 
 git push -f git@github.com:dylandaviddavies/design3.git master:gh-pages
-
-cd -
