@@ -27,7 +27,7 @@ h4{
 }
 @each $k, $v in $letter-spacings {
     .letter-spacing-#{$k}{
-      letter-spacing: $v;
+      letter-spacing: $v !important;
     }
 }
 .font-weight-black{
